@@ -1,0 +1,81 @@
+header.row
+	div.container#top_header.hidden-sm.hidden-xs
+		div#top_menu.col-md-10 <!-- Верхнее меню top_menu-->
+			div.subnav
+				ul.nav.nav-pills
+					li.dropdown
+						a.dropdown-toggle(data-toggle='dropdown' href='#') Контакти								
+					li
+						a(href='#labels') Прийом громадян
+					li
+						a(href='#labels') Електронна приймальня
+						
+			//- Верхнее правое меню top_menu
+		div#lang.col-md-2
+			a(href='') Укр
+				//- i.fa.fa-facebook(aria-hidden='true')
+			a(href='') Рус
+				//- i.fa.fa-youtube(aria-hidden='true')        
+			a(href='') Eng
+			//- 		i.fa.fa-skype(aria-hidden='true')
+	div#header.row
+		div.container
+			div#logo.col-xs-12.col-md-8
+				div.logo_img.col-xs-1 
+					a(href='index.html')
+						img(src='images/gerb.jpg')
+				div#logo_text.col-xs-7		
+					p#uppercase_text Семенівська міська рада <br> Семенівського району
+					p#small_text Чернігівської області					
+			//- поле поиска
+			div#search.hidden-sm.hidden-xs.col-md-4
+				form
+					input.form-control(type='search' placeholder='Пошук')
+					button.round_btn.act(type="submit")
+						i.fa.fa-search        
+			//- button#main_menu_header.col-xs-1.col-xs-offset-5.dropdown-toggle(type="button" data-toggle="dropdown")
+			//- 	a#main-menu-toggle(href="")
+			//- 		i.fa.fa-bars
+			
+			//- ul.dropdown-menu
+			//- 	li
+			//- 		a(href="#") Про управління
+			//- 	li
+			//- 		a(href="#") Структура управління
+			//- 	li
+			//- 		a(href="#") Органи та установи юстиції
+			//- 	li
+			//- 		a(href="#") Напрямки діяльності
+	nav.row.greedy
+		div.container#container_nav_menu    
+			div.subnav#menu				
+				ul.nav.nav-pills 
+					//- li.all_menu
+					//- 	a#count(data-toggle="dropdown" href='#') Більше
+					//- 		b.caret 
+					//- 	ul.hidden-links.hidden.dropdown-menu
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Новини							
+							b.caret
+						ul.dropdown-menu
+							li
+								a.menu_featured_link(href="#navs")
+									Правові засади
+							li
+								a.menu_featured_link(href="#navbar")
+									Організаційні питання
+							li
+								a.menu_featured_link(href="#breadcrumbs")
+									Історичний екскурс
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Анонси
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Наш край										
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Для учасників АТО
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Герої не вмирають
+					li.dropdown
+						a.dropdown-toggle(data-toggle="dropdown" href="#") Роз’яснення щодо заповнення електронних декларацій
+				
+

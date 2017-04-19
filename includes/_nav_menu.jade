@@ -1,0 +1,25 @@
+nav.navbar
+	div.container.navbar-default
+		div.navbar-collapse.row
+			ul.nav.navbar-nav
+				//- li.active
+				//- 	a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 1
+				//- 		span.caret
+				//- 	ul.dropdown-menu
+				//- 		li
+				//- 			a(href="#")	a
+				//- 		li
+				//- 			a(href="#")	b
+				//- 		li
+				//- 			a(href="#")	c		
+				li
+					a(href="#")	Головна
+				li
+					a(href="#")	Контакти
+			div#search				
+				form.navbar-form(role='search')
+					div.input-group.add-on
+						input#srch-term.form-control(placeholder='пошук' name='srch-term' type='text')
+						div.input-group-btn
+							button.btn.btn-default(type='submit')
+								i.glyphicon.glyphicon-search

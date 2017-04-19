@@ -1,0 +1,174 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "bourbon/bourbon";
+@import "neat/neat";
+// @import "compass/layout.scss";
+@import "compass/layout/sticky-footer";
+
+@include sticky-footer(72px, "#layout", "#layout_footer", "#footer");
+$base-color: rgba(30,30,30,0.9);
+$base-font-family: "Sans-Condense_Bold", Arial, sans-serif;
+$base-text-transform: uppercase; //верхний регистр
+@mixin topic() {
+  text-transform: $base-text-transform;
+  font-family: 'Lobster', cursive;
+  margin: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+// -----------------------------------------------------------------------------header
+.layout-header {
+  width: 100%;
+  background-color: #eee;
+    
+  .header-menu{
+    background-color: #eee;
+    max-height: 35px;
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.08) 100%);
+    animation: changeBgColor 10s infinite;
+    
+    @keyframes changeBgColor {
+      from {background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.08) 100%);}
+      to   {background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgb(255, 179, 128) 100%);}
+    }
+    .header{
+      // @include columns(8 of 12);
+
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+
+      .nav {
+        height: 35px;
+        font-size: 10px;
+        
+        .nav__item {
+          float: left;
+          .nav__link {
+            display: block;
+            font-size: 14px;
+            line-height: 35px;
+            text-transform: $base-text-transform;
+            color: #666;
+            padding: 0 14px 0 14px;
+            cursor: pointer;
+            font-family: $base-font-family;
+            position: relative;
+            animation: fontbulger 2s infinite;
+          }
+          .nav__link:hover {
+            display: block;
+            font-size: 14px;
+            line-height: 35px;
+            text-transform: $base-text-transform;
+            color: #e95d3c;
+            padding: 0 14px 0 14px;
+            cursor: pointer;
+            font-family: $base-font-family;
+            position: relative;
+          }
+
+          .nav__link_active {
+            color: #c80304;
+            padding: 0 14px 0 14px;
+            background-color: #fff;
+            max-height: 35px;
+            overflow: hidden;
+
+          }
+        }
+      }
+    }
+  }
+
+  .nav li:nth-child(1) .nav__link:before {
+    display: inline-block;
+    height: 35px;
+    width: 0px;
+    border-right: #fcfcfc 1px solid;
+    border-left: #d1d1d1 1px solid;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+
+  .nav__link:after {
+    display: inline-block;
+    height: 35px;
+    width: 0px;
+    border-right: #fcfcfc 1px solid;
+    border-left: #d1d1d1 1px solid;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+  }
+.under_menu {
+  *zoom:1;
+  list-style:none;
+  margin:0;
+  padding:0;
+ }
+
+.under_menu ul > li {
+    float:left;
+    position:relative;
+}
+.under_menu a {
+    display:block;
+    padding:10px 20px;
+    line-height:1.2em;
+    color:#fff;
+    // border-left:1px solid #595959;
+}
+.under_menu a:hover {
+    text-decoration:none;
+    background:rgba(0,0,0,0.08);
+}
+.under_menu li ul {
+    background:rgba(255, 179, 128, 0.9);
+}
+.under_menu li ul li {
+    width:200px;
+}
+.under_menu li ul a {
+    border:none;
+}
+.under_menu li ul a:hover {
+    background:rgba(0,0,0,0.08);
+}
+
+.under_menu li ul {
+    position:absolute;
+    left:-9999em;
+    top:36px;
+    z-index:1;
+}
+.under_menu ul > li:hover ul {
+    left:0;
+}
+.under_menu li ul {
+    position:absolute;
+    left:0;
+    top:36px;
+    z-index:1;
+}
+.under_menu li ul li {
+    overflow:hidden;
+    height:0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+}
+.under_menu ul > li:hover ul li {
+    height:36px;
+}
+}

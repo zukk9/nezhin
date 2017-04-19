@@ -1,0 +1,36 @@
+doctype
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		title Сайт Ніжина
+		
+		link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')
+		link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
+		link(href='stylesheets/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='stylesheets/nav-side-menu.css', media='screen, projection', rel='stylesheet', type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Philosopher', rel='stylesheet')
+		link(rel="stylesheet" href="bootstrap/bootstrap-submenu-2.0.4/dist/css/bootstrap-submenu.min.css")
+		
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+		script(type='text/javascript', src='bootstrap/js/bootstrap.min.js')
+	body
+		include includes/_topHeader
+		include includes/_headerWtm
+		include includes/_nav_menu
+		//- include includes/_section1
+		include includes/_section_col_12
+		//- include includes/_section_slider
+		include includes/_section3_links
+		//- include includes/_section2
+		include includes/_footer
+		//- script
+			//- $('#logo_text').fitText();
+		
+		//- script(src='js/jquery.fittext.js')
+		script(type='text/javascript', src='bootstrap/bootstrap-submenu-2.0.4/dist/js/bootstrap-submenu.min.js')
+		script(src='js/submenu.js')
+		script(src='js/count_menu.js')
+		//- script(src='js/leftbar.js')	
+			
